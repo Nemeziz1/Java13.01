@@ -24,7 +24,6 @@ class ProductRepositoryTest {
   @Test
   public void shouldNotFound() {
     repository.save(book);
-    repository.removeById(2);
-    assertThrows(NotFoundException.class, () -> repository.throwNotFound());
+    assertThrows(NotFoundException.class, () -> repository.removeById(2));
   }
 }
